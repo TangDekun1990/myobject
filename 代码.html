@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //26 在控制台输出 1到100之间 所有能被5整除的数的和
+        //1到100之间 --->for循环
+        //限制条件:%5==0
+        //变量累加
+        /* var sum = 0;
+        for(var i = 1 ; i <=100 ; i++){
+            if(i%5 == 0){
+                sum = sum + i;
+            }
+        }
+        console.log(sum); */
+
+        //27.请将1到100之间所有能被3整除的数字添加到新数组arr中
+        // 1到100之间 --->for循环
+        //限制条件 %3 == 0
+        //需要一个空数组 arr
+        /* var arr = [];
+        for(var i =1; i<=100 ; i++){
+            if(i%3==0){
+                // arr.push(i)
+                arr[arr.length] = i;
+            }
+        }
+        console.log(arr) */
+
+        //28.打印九九乘法表
+        //两层循环
+        /* for(var i = 1 ; i<=9 ;i++){
+            for(var j = 1; j <= i;j++){
+                document.write(j+'*'+i+'='+i*j);
+                document.write('  ')
+            }
+            document.write('<br>')
+        } */
+
+
+
+        //29.已知数组 arr = [1,9,3,7,5] ,使用程序计算出该数组的最大值，封装成函数
+        //写功能
+        arr = [1, 9, 3, 7, 5];
+        var max = arr[0];
+        for (var i = 0; i < arr.length; i++) {
+            if (max < arr[i]) {
+                max = arr[i];
+            }
+        }
+        //加壳子-->封装
+        //getMax()----->max----return
+        // function getMax(arr){
+        // //  arr = [1, 9, 3, 7, 5];
+        //     var max = arr[0];
+        //     for (var i = 0; i < arr.length; i++) {
+        //         if (max < arr[i]) {
+        //             max = arr[i];
+        //         }
+        //     } 
+
+        //     return max;
+        // }
+        // /* 
+        //     1,加壳子--function fn(){}
+        //     2,按照需求,确定要不要加返回值
+        //     3,把功能代码全部粘贴到 fn的代码体中
+        //     4,就按照用户调用时的场景决定,功能中的哪些死数据是需要 当做形式参数的.
+        //  */
+        // getMax([2,3,4,5,6,7])
+        // getMax([2,3,4,5,6,1])
+        // getMax([2,3,4,5,6,2])
+        // getMax([2,3,4,5,6,3])
+
+
+        // 冒泡排序:封装一个对数组元素进行冒泡排序的函数（从大到小）
+        // var arr = [2,3,4,56,7,7,8]
+        // for(var i = 0 ; i < arr.length -1 ;i++){
+        //     for(var j = 0 ; j <= arr.length -i ;j++){
+        //         if(arr[j] < arr[j+1]){
+        //             var temp = arr[j];
+        //             arr[j] = arr[j+1];
+        //             arr[j+1] = temp;
+        //         }
+        //     }
+        // }
+
+        // // 写一个fn
+        // function MaoPao(arr){
+        //     // var arr = [2, 3, 4, 56, 7, 7, 8]
+        //     for (var i = 0; i < arr.length - 1; i++) {
+        //         for (var j = 0; j <= arr.length - i; j++) {
+        //             if (arr[j] < arr[j + 1]) {
+        //                 var temp = arr[j];
+        //                 arr[j] = arr[j + 1];
+        //                 arr[j + 1] = temp;
+        //             }
+        //         }
+        //     }
+        //     return arr;
+        // }
+
+        // // MaoPao([1,2,34,5,3,2,2,2]) ---->arr
+        // console.log(MaoPao([312, 123, 423, 1323, 223, 123, 31, 4123, 124, 41, 53, 315, 15, 23, 6]))
+
+        //编写一个函数，将如下字符串'get-element-by-class-name'修改为驼峰表示法'getElementById' 
+        // var str =
+        //     'get-element-by-class-name-element-by-class-name-element-by-class-name-element-by-class-name-element-by-class-name-element-by-class-name-element-by-class-name';
+        // var strArr = str.split('-'); //["get","element","by","class","name","name","name","name","name","name","name"]
+        // var finalStr = strArr[0];
+        // for (var i = 1; i < strArr.length; i++) {
+        //     var s = strArr[i];
+        //     var s1 = s.slice(1);
+        //     //    把strArr[i] 首字母拿出来换成大写的,
+        //     var firstLetter = s[0].toUpperCase();
+        //     var newS = firstLetter + s1;
+        //     console.log(newS);
+        //     // 把strArr[i]拼成字符串
+        //     finalStr = finalStr + newS;
+        // }
+
+        // fu
+    //     function tuoFeng(str) {
+    //         //var str =
+    //         //    'get-element-by-class-name-element-by-class-name-element-by-class-name-element-by-class-name-element-by-class-name-element-by-class-name-element-by-class-name';
+    //         var strArr = str.split('-'); //["get","element","by","class","name","name","name","name","name","name","name"]
+    //         var finalStr = strArr[0];
+    //         for (var i = 1; i < strArr.length; i++) {
+    //             var s = strArr[i];
+    //             var s1 = s.slice(1);
+    //             //    把strArr[i] 首字母拿出来换成大写的,
+    //             var firstLetter = s[0].toUpperCase();
+    //             var newS = firstLetter + s1;
+    //             console.log(newS);
+    //             // 把strArr[i]拼成字符串
+    //             finalStr = finalStr + newS;
+    //         }
+
+    //         return finalStr;
+    //     }
+
+    // var s = tuoFeng('class-name-element-by-class-name-element-by-class-name-element-by-class-name-element-by-class-name-element-by');
+    // console.log(s)
+
+    </script>
+</body>
+
+</html>
