@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+<script >
+  function getArr(arr){
+    var sum=0;
+    var max=0;
+    var min=0;
+    arr.sort(function(a,b){
+      return a-b;
+    });
+    max=arr[arr.length-1];
+    min=arr[0];
+    for(var i=0;i<arr.length;i++){
+      sum=sum+arr[i];
+    }
+    var str='数组中元素的和是'+sum+'最大值:'+max+'最小值:'+min;
+    return str;
+  }
+
+ var r=getArr([12,2,14,56,3,7,8]);
+  console.log(r);
+
+
+
+</script>
+</body>
+</html>
